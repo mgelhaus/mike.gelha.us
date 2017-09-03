@@ -519,6 +519,50 @@
 	},
 	"buffers":
 	[
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": ".gitignore",
+			"settings":
+			{
+				"buffer_size": 83,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Package Control Messages\n========================\n\nVCS Gutter\n----------\n\n  VCS Gutter\n  ==========\n  \n  VCS Gutter is a plugin for Sublime Text 2 and 3 that displays an icon in the gutter area indicating whether a line has been inserted, modified or deleted relative to the version of the file in the local source code repository. VCS Gutter supports Git, Mercurial and Subversion.\n  \n  VCS Gutter is a \"friendly fork\" that builds on the original work in Git Gutter by jisaacks (https://github.com/jisaacks/GitGutter).\n  \n  Installation\n  ------------\n  \n  VcsGutter assumes that the `git`, `hg`, `svn` and `diff` commands are availible on the command line. The installers for these tools may not add the directory containing the executables to the PATH environment variable. If not, you must add the appropriate directory to your PATH variable.\n  \n  For example:\n  ```dos\n   %PATH%;C:\\Program Files (x86)\\Git\\bin;C:\\Program Files (x86)\\Git\\cmd\n  ```\n  \n  Alternatively, you can configure the paths in settings as described below.\n  \n  Settings\n  --------\n  \n  Settings are accessed via the Preferences / Package Settings / VCS Gutter menu.\n  \n  Default settings should not be modified, as they are overwritten when VCS Gutter is updated. Instead, you should copy the relevant settings into VCS Gutter's user settings file.\n  \n  Live Mode\n  ~~~~~~~~~\n  \n  By default, VCS Gutter detects changes every time the file is modified. If you experience performance issues you can set it to only run on save by setting `live_mode` to `false`.\n  \n  Non-Blocking Mode\n  ~~~~~~~~~~~~~~~~~\n  \n  By default, VcsGutter runs in the same thread which can block if it starts to perform slowly. Usually this isn't a problem but depending on the size of your file or repo it can be. If you set `non_blocking` to `true` then VcsGutter will run in a seperate thread and will not block. This does cause a slight delay between when you make a modification and when the icons update in the gutter. This is a ***Sublime Text 3 only feature***. Sublime Text 2 users can turn off live mode if performance is an issue.\n  \n  Executable Path\n  ~~~~~~~~~~~~~~~\n  \n  If your VCS executable (git, hg, or svn) or diff utility is not in your PATH, you may need to set the `vcs_paths` setting to the location of your executables:\n  \n  {\n      \"vcs_paths\": {\n          \"diff\": \"diff\",\n          \"git\": \"git\",\n          \"hg\": \"/usr/local/bin/hg\",\n          \"svn\": \"svn\"\n      }\n  }\n  \n  Colors\n  ~~~~~~\n  \n  The colors come from your color scheme .tmTheme file. If your color scheme file does not define the appropriate colors (or you want to edit them) add an entry that looks like this:\n  \n  <dict>\n    <key>name</key>\n    <string>diff.deleted</string>\n    <key>scope</key>\n    <string>markup.deleted</string>\n    <key>settings</key>\n    <dict>\n      <key>foreground</key>\n      <string>#F92672</string>\n    </dict>\n  </dict>\n  <dict>\n    <key>name</key>\n    <string>diff.inserted</string>\n    <key>scope</key>\n    <string>markup.inserted</string>\n    <key>settings</key>\n    <dict>\n      <key>foreground</key>\n      <string>#A6E22E</string>\n    </dict>\n  </dict>\n  <dict>\n    <key>name</key>\n    <string>diff.changed</string>\n    <key>scope</key>\n    <string>markup.changed</string>\n    <key>settings</key>\n    <dict>\n      <key>foreground</key>\n      <string>#967EFB</string>\n    </dict>\n  </dict>\n  \n  Jumping Between Changes\n  ~~~~~~~~~~~~~~~~~~~~~~~\n  \n  There are commands to jump between modifications. The default key bindings for these commands are:\n  \n  **Linux**\n  \n  prev: <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>alt</kbd> + <kbd>k</kbd>\n  next: <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>alt</kbd> + <kbd>j</kbd>\n  \n  **OS X**\n  \n  prev: <kbd>command</kbd> + <kbd>shift</kbd> + <kbd>option</kbd> + <kbd>k</kbd>\n  next: <kbd>command</kbd> + <kbd>shift</kbd> + <kbd>option</kbd> + <kbd>j</kbd>\n  \n  **Windows**\n  \n  prev: <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>alt</kbd> + <kbd>k</kbd>\n  next: <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>alt</kbd> + <kbd>j</kbd>\n",
+			"settings":
+			{
+				"buffer_size": 4041,
+				"line_ending": "Windows",
+				"name": "Package Control Messages",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"file": "templates/layout/default.tpl",
+			"settings":
+			{
+				"buffer_size": 118,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "hosts",
+			"settings":
+			{
+				"buffer_size": 801,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -527,10 +571,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
-		"last_filter": "rem",
+		"height": 490.0,
+		"last_filter": "pack",
 		"selected_items":
 		[
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
 			[
 				"rem",
 				"Package Control: Remove Package"
@@ -538,10 +586,6 @@
 			[
 				"pack ins",
 				"Package Control: Install Package"
-			],
-			[
-				"pack",
-				"Preferences: Browse Packages"
 			],
 			[
 				"inst",
@@ -560,7 +604,7 @@
 				"Preferences: Browse Packages"
 			]
 		],
-		"width": 416.0
+		"width": 571.0
 	},
 	"console":
 	{
@@ -582,10 +626,17 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/a-mic/Documents/Projects/mike.gelha.us"
+		"/C/Users/a-mic/Documents/Projects/mike.gelha.us",
+		"/C/Users/a-mic/Documents/Projects/mike.gelha.us/config",
+		"/C/Users/a-mic/Documents/Projects/mike.gelha.us/templates",
+		"/C/Users/a-mic/Documents/Projects/mike.gelha.us/templates/app",
+		"/C/Users/a-mic/Documents/Projects/mike.gelha.us/templates/error",
+		"/C/Users/a-mic/Documents/Projects/mike.gelha.us/templates/layout"
 	],
 	"file_history":
 	[
+		"/C/Users/a-mic/Documents/Projects/mike.gelha.us/templates/layout/default.php",
+		"/C/Users/a-mic/Documents/Projects/mike.gelha.us/templates/error/404.php",
 		"/C/Users/a-mic/AppData/Roaming/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
 		"/C/Users/a-mic/Documents/Projects/blog/blog.sublime-project",
 		"/C/Users/a-mic/Documents/Projects/Jeromes/settings/.gitignore",
@@ -838,8 +889,164 @@
 	"groups":
 	[
 		{
+			"selected": 4,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"default_dir": "C:\\Users\\a-mic\\Documents\\Projects\\mike.gelha.us\\templates\\error",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": ".gitignore",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 83,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								29,
+								29
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4041,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4041,
+								4041
+							]
+						],
+						"settings":
+						{
+							"auto_indent": false,
+							"incomplete_sync": null,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_width": 2,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "templates/layout/default.tpl",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 118,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "hosts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 801,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								772,
+								772
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
